@@ -9,7 +9,7 @@ import { Hero } from '../hero';
 export class HeroFormComponent {
 
 poderes = ['Realmente inteligente', 'Súper flexible',
-              'Super caliente', 'Cambiador de clima']
+              'Super caliente', 'Cambiador de clima'];
 
 model = new Hero(18,'Dr. IQ', this.poderes[0], 'Megamente');
 
@@ -19,7 +19,7 @@ onSubmit() {this.submitted = true; }
 
 newHero(){
   this.model = new Hero(42,'','');
-}
+  }
 
 }
 

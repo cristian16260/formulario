@@ -1,7 +1,7 @@
-<div class="conteiner">
+<div class="container">
 <div [hidden]="submitted">
 <h2>Foumulario de Heroes</h2>
-<form (ngSubmit)="onSubmit" #heroForm="ngForm">  
+<form (ngSubmit)="onSubmit()" #heroForm="ngForm">  
 
 <div class="form-group">
     <label for="name">Nombre del Heroe</label><br>
@@ -16,7 +16,7 @@
 
 <div class="form-group">
     <label for="alterEgo">Apodo</label><br>
-    <input type="text" class="form-control"  id="alterEgo" required 
+    <input type="text" class="form-control"  id="alterEgo"
     [(ngModel)]="model.alterEgo" name="alterEgo">   
     <br>
 </div> 
@@ -35,7 +35,7 @@
 
 
 <br>
-<button type="submit" class="btn btn-success" [disabled]="!heroForm.form.valid">submit</button>
+<button type="submit" class="btn btn-success" [disabled]="!heroForm.form.valid">enviar</button>
 <button type="button" class="btn btn-default" (click)="newHero();
 heroForm.reset()">Nuevo heroe</button>
 
@@ -47,7 +47,7 @@ heroForm.reset()">Nuevo heroe</button>
 
 <div [hidden]="!submitted">
 
-    <h2>Usted envió lo siguiente:</h2>
+    <h2>Envió lo siguiente:</h2>
     <div class="row">
         <div class="col-xs-3">Nombre</div>
         <div class="col-xs-9">{{ model.name }}</div>
